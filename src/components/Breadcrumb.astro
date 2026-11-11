@@ -1,0 +1,15 @@
+---
+import { path } from "../lib/sites";
+type Crumb = { href?: string; label: string };
+type Props = { items: Crumb[] };
+const { items } = Astro.props;
+---
+<nav class="crumbs wrap" aria-label="パンくず">
+  <a href={path("/")}>トップ</a>
+  {items.map((item) => (
+    <>
+      <span aria-hidden="true">/</span>
+      {item.href ? <a href={path(item.href)}>{item.label}</a> : <span>{item.label}</span>}
+    </>
+  ))}
+</nav>

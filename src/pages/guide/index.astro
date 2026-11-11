@@ -1,0 +1,81 @@
+---
+import Base from "../../layouts/Base.astro";
+import Breadcrumb from "../../components/Breadcrumb.astro";
+import { portal, sites, guides, path } from "../../lib/sites";
+---
+<Base
+  title="目的別ナビ"
+  description="お店、発表、集客、公式情報。目的から、鹿児島の4メディアのどれを開けばいいかを案内します。"
+  path="guide/"
+>
+  <Breadcrumb items={[{ label: "目的別ナビ" }]} />
+  <header class="page-hero wrap">
+    <div class="kicker">GUIDE</div>
+    <h1>何を知りたいかから選ぶ</h1>
+    <p>4メディアは、同じニュースを4回書いているわけではありません。目的が先、媒体はあと、が迷わない順番です。</p>
+  </header>
+
+  <section class="section wrap">
+    <h2>早見</h2>
+    <div class="matrix-wrap">
+      <table class="matrix">
+        <thead>
+          <tr>
+            <th>目的</th>
+            {sites.map((s) => <th>{s.short}</th>)}
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">ごはん・お店</th>
+            <td>主</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+          </tr>
+          <tr>
+            <th scope="row">企業の発表</th>
+            <td class="empty">現場の話</td><td>主</td><td class="empty">—</td><td class="empty">—</td>
+          </tr>
+          <tr>
+            <th scope="row">統計・集客</th>
+            <td class="empty">—</td><td class="empty">広報の学び</td><td>主</td><td class="empty">—</td>
+          </tr>
+          <tr>
+            <th scope="row">行政の公式情報</th>
+            <td class="empty">催しの雰囲気</td><td class="empty">自治体のPR</td><td class="empty">—</td><td>主</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section wrap">
+    <h2>目的から開く</h2>
+    <div class="guides">
+      {guides.map((g) => {
+        const site = sites.find((s) => s.id === g.siteId)!;
+        return (
+          <article class="guide" id={g.id} style={`--c:${site.colors.primary}`}>
+            <p class="tag">{site.name}</p>
+            <h3>{g.title}</h3>
+            <p>{g.lead}</p>
+            <p>{g.body}</p>
+            <ul class="sns">
+              {g.links.map((l) => (
+                <li><a href={l.url} target="_blank" rel="noopener"><b>{l.label}</b></a></li>
+              ))}
+              <li><a href={path(`${site.id}/`)}><b>メディア案内</b></a></li>
+            </ul>
+          </article>
+        );
+      })}
+    </div>
+  </section>
+
+  <section class="section wrap">
+    <h2>まだ決まっていないとき</h2>
+    <p class="sec-lead">{portal.lead}</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href={path("latest/")}>とりあえず新着</a>
+      <a class="btn btn-ghost" href={path("sns/")}>SNSから見る</a>
+    </div>
+  </section>
+</Base>

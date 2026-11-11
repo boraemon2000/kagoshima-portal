@@ -1,0 +1,26 @@
+---
+import Base from "../layouts/Base.astro";
+import { path, sites } from "../lib/sites";
+---
+<Base title="ページが見つかりません" description="カゴシマ メディアポータルに、指定のページはありません。" path="404.html">
+  <header class="page-hero wrap">
+    <div class="kicker">404</div>
+    <h1>この住所には、ページがありません</h1>
+    <p>トップか、目的別ナビから探してみてください。</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href={path("/")}>トップへ</a>
+      <a class="btn btn-ghost" href={path("guide/")}>目的別ナビ</a>
+    </div>
+  </header>
+  <section class="section wrap">
+    <div class="guides">
+      {sites.map((s) => (
+        <a class="guide" href={path(`${s.id}/`)}>
+          <p class="tag" style={`color:${s.colors.primary}`}>{s.role}</p>
+          <h3>{s.name}</h3>
+          <p>{s.description}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+</Base>

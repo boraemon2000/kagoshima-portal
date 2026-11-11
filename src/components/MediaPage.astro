@@ -1,0 +1,114 @@
+---
+import Base from "../layouts/Base.astro";
+import Breadcrumb from "./Breadcrumb.astro";
+import SnsList from "./SnsList.astro";
+import PostList from "./PostList.astro";
+import { path, postsFor, relatedSites, type Site } from "../lib/sites";
+
+type Props = { site: Site };
+const { site } = Astro.props;
+const related = relatedSites(site);
+const posts = postsFor(site.id, 8);
+---
+<Base title={site.name} description={site.description} path={`${site.id}/`}>
+  <Breadcrumb items={[{ href: `${site.id}/`, label: site.name }]} />
+  <header class="page-hero wrap" style={`--c:${site.colors.primary}`}>
+    <div class="kicker">{site.kicker}</div>
+    <h1>{site.name}</h1>
+    <p>{site.long}</p>
+    <ul class="toc">
+      <li><a href="#about">何を扱うか</a></li>
+      <li><a href="#when">こんなときに</a></li>
+      <li><a href="#read">読み方</a></li>
+      <li><a href="#hubs">入口</a></li>
+      <li><a href="#sns">SNS</a></li>
+      <li><a href="#latest">新着</a></li>
+      <li><a href="#next">他のメディア</a></li>
+    </ul>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href={site.url} target="_blank" rel="noopener">サイトを開く</a>
+      <a class="btn btn-ghost" href={path("sns/")}>SNS一覧へ</a>
+    </div>
+  </header>
+
+  <section class="section wrap" id="about">
+    <h2>何を扱うか</h2>
+    <p class="sec-lead">{site.description}</p>
+    <div class="split">
+      <div class="panel prose">
+        <p>{site.long}</p>
+        <p>記事の本文・写真・訂正は、すべて先方のサイト側にあります。このポータルは入口です。</p>
+      </div>
+      <div class="panel">
+        <p class="tag" style={`color:${site.colors.primary}`}>{site.role}</p>
+        <p class="desc" style="margin-top:8px">公式サイト<br /><a href={site.url} target="_blank" rel="noopener">{site.host}</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap" id="when">
+    <h2>こんなときに開く</h2>
+    <ul class="checklist">
+      {site.whenToOpen.map((item) => <li>{item}</li>)}
+    </ul>
+  </section>
+
+  <section class="section wrap" id="read">
+    <h2>読み方</h2>
+    <ul class="checklist">
+      {site.howToRead.map((item) => <li>{item}</li>)}
+    </ul>
+  </section>
+
+  <section class="section wrap" id="hubs">
+    <h2>入口</h2>
+    <p class="sec-lead">先方サイトの公開ページへ直接飛びます。件数や人気順は書いていません。</p>
+    <div class="hubs">
+      {site.hubs.map((h) => (
+        <a class="hub" href={h.url} target="_blank" rel="noopener">
+          <h3>{h.label}</h3>
+          <p>{h.blurb}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="section wrap" id="sns">
+    <h2>SNS</h2>
+    <p class="sec-lead">確認できたアカウントだけです。</p>
+    <SnsList accounts={site.sns} color={site.colors.primary} />
+  </section>
+
+  {site.business.length > 0 && (
+    <section class="section wrap" id="biz">
+      <h2>掲載・相談</h2>
+      <p class="sec-lead">ポータルでは受け付けません。先方のページへどうぞ。</p>
+      <div class="hero-actions">
+        {site.business.map((b) => (
+          <a class="btn btn-ghost" href={b.url} target="_blank" rel="noopener">{b.label}</a>
+        ))}
+      </div>
+    </section>
+  )}
+
+  <section class="section wrap" id="latest">
+    <h2>このメディアの新着</h2>
+    <p class="sec-lead">公開済みの記事だけを表示します。画像は転載しません。</p>
+    <PostList posts={posts} showSite={false} />
+    <p style="margin-top:14px"><a href={path("latest/")}>4メディア横断の新着へ</a></p>
+  </section>
+
+  <section class="section wrap" id="next">
+    <h2>となりのメディア</h2>
+    <p class="sec-lead">{site.relatedNote}</p>
+    <div class="grid-2">
+      {related.map((r) => (
+        <a class="guide" href={path(`${r.id}/`)} style={`--c:${r.colors.primary}`}>
+          <p class="tag">{r.role}</p>
+          <h3>{r.name}</h3>
+          <p>{r.description}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+</Base>

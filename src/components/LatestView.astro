@@ -1,0 +1,58 @@
+---
+import Base from "../layouts/Base.astro";
+import Breadcrumb from "./Breadcrumb.astro";
+import PostList from "./PostList.astro";
+import { sites, path, postsFor, latest, siteById } from "../lib/sites";
+
+type Props = { siteId: string };
+const { siteId } = Astro.props;
+const active = sites.some((s) => s.id === siteId) ? siteId : "";
+const site = active ? siteById(active) : null;
+const posts = postsFor(active || undefined, 40);
+const pagePath = active ? `latest/${active}/` : "latest/";
+const title = site ? `${site.name}の新着` : "新着フィード";
+const description = site
+  ? `${site.name}の公開済み記事です。`
+  : "カゴシマニアックス、プレスリリースかごしま、カゴシマーケティング、かごしま情報ブログの公開済み記事を横断して表示します。";
+---
+<Base title={title} description={description} path={pagePath}>
+  <Breadcrumb items={[{ href: "latest/", label: "新着フィード" }, ...(site ? [{ label: site.short }] : [])]} />
+  <header class="page-hero wrap">
+    <div class="kicker">LATEST</div>
+    <h1>{site ? `${site.name}の新着` : "4メディアの新着"}</h1>
+    <p>公開済みの記事だけを、タイトル・日付・出典・抜粋で並べます。アイキャッチ画像は転載しません。下書きは出ません。</p>
+    {latest.updatedAt ? (
+      <p class="note">最終取得: {latest.updatedAt.replace("T", " ").replace("Z", " UTC")}</p>
+    ) : (
+      <p class="note">自動取得の結果がまだありません。GitHub Actions が走るまでは、各サイトで最新を見てください。</p>
+    )}
+  </header>
+
+  <section class="section wrap">
+    <div class="filters" aria-label="メディアで絞り込み">
+      <a class="chip" href={path("latest/")} aria-current={active ? undefined : "page"}>すべて</a>
+      {sites.map((s) => (
+        <a class="chip" href={path(`latest/${s.id}/`)} aria-current={active === s.id ? "page" : undefined}>{s.short}</a>
+      ))}
+    </div>
+    <PostList posts={posts} showSite={!active} />
+  </section>
+
+  <section class="section wrap">
+    <h2>取得の状態</h2>
+    <div class="grid-4">
+      {sites.map((s) => {
+        const st = latest.sites?.[s.id];
+        return (
+          <div class="panel">
+            <p class="tag" style={`color:${s.colors.primary}`}>{s.name}</p>
+            <p class="desc">
+              {st?.ok ? `取得成功（${st.source}）` : st ? `前回分を保持` : "未取得"}
+            </p>
+            <p class="desc"><a href={s.url} target="_blank" rel="noopener">サイトで見る</a></p>
+          </div>
+        );
+      })}
+    </div>
+  </section>
+</Base>

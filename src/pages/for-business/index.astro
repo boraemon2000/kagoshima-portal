@@ -1,0 +1,85 @@
+---
+import Base from "../../layouts/Base.astro";
+import Breadcrumb from "../../components/Breadcrumb.astro";
+import { businessPaths, path, siteById, faq } from "../../lib/sites";
+---
+<Base
+  title="事業者の方へ"
+  description="プレスリリースの掲載、集客の相談、取材の依頼。カゴシマ メディアポータルにはフォームがありません。各メディアの既存窓口へ案内します。"
+  path="for-business/"
+>
+  <Breadcrumb items={[{ label: "事業者の方へ" }]} />
+  <header class="page-hero wrap">
+    <div class="kicker">FOR BUSINESS</div>
+    <h1>発表したい、相談したい、取り上げてほしい</h1>
+    <p>このポータルにフォームはありません。原稿も、見積もり依頼も、各メディアの既存ページへ送ってください。料金や支援範囲は、先方の案内が正です。こちらでは再掲しません。</p>
+  </header>
+
+  <section class="section wrap">
+    <div class="guides">
+      {businessPaths.map((b) => {
+        const site = siteById(b.siteId);
+        return (
+          <article class="path" id={b.id} style={`--c:${site.colors.primary}`}>
+            <p class="tag">{site.name}</p>
+            <h3>{b.title}</h3>
+            <p>{b.body}</p>
+            <ol class="checklist">
+              {b.steps.map((s) => <li>{s}</li>)}
+            </ol>
+            <ul class="sns">
+              {site.business.map((x) => (
+                <li><a href={x.url} target="_blank" rel="noopener"><b>{x.label}</b></a></li>
+              ))}
+              <li><a href={path(`${site.id}/`)}><b>メディア案内</b></a></li>
+            </ul>
+          </article>
+        );
+      })}
+    </div>
+  </section>
+
+  <section class="section wrap">
+    <h2>窓口を間違えないために</h2>
+    <div class="matrix-wrap">
+      <table class="matrix">
+        <thead>
+          <tr>
+            <th>やりたいこと</th>
+            <th>向かう先</th>
+            <th>向かない先</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>公式発表を残したい</td>
+            <td>プレスリリースかごしま</td>
+            <td>このポータルの問い合わせ（無い）</td>
+          </tr>
+          <tr>
+            <td>数字や集客の相談</td>
+            <td>カゴシマーケティング</td>
+            <td>かごしま情報ブログ（公式情報の配信）</td>
+          </tr>
+          <tr>
+            <td>現場の記事として扱ってほしい</td>
+            <td>カゴシマニアックス</td>
+            <td>統計解説のメディア</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section wrap">
+    <h2>よくある質問</h2>
+    <div class="post-list">
+      {faq.slice(0, 3).map((item) => (
+        <details class="faq">
+          <summary>{item.q}</summary>
+          <p>{item.a}</p>
+        </details>
+      ))}
+    </div>
+  </section>
+</Base>

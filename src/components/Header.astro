@@ -1,0 +1,35 @@
+---
+import { portal, sites, nav, path } from "../lib/sites";
+---
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href={path("/")}>
+      <small>{portal.nameEn}</small>
+      <strong>
+        <span class="brand-full">{portal.name}</span>
+        <span class="brand-short">カゴシマ</span>
+      </strong>
+    </a>
+    <nav id="site-nav" class="nav" aria-label="主要">
+      <details>
+        <summary>メディア</summary>
+        <div class="sub">
+          {sites.map((s) => (
+            <a href={path(`${s.id}/`)}>
+              <span class="dot" style={`--c:${s.colors.primary}`}></span>
+              {s.name}
+            </a>
+          ))}
+        </div>
+      </details>
+      {nav.map((item) => (
+        <a href={path(item.href)}>{item.label}</a>
+      ))}
+      <a href={path("about/")}>このポータルについて</a>
+    </nav>
+    <div class="tools">
+      <button class="theme-btn" type="button" data-theme-toggle aria-label="ライトとダークを切り替え">色</button>
+      <button class="menu-btn" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-nav">開く</button>
+    </div>
+  </div>
+</header>

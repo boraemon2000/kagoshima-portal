@@ -1,0 +1,11 @@
+---
+import LatestView from "../../../components/LatestView.astro";
+import { sites } from "../../../lib/sites";
+
+export function getStaticPaths() {
+  return sites.map((s) => ({ params: { site: s.id } }));
+}
+
+const { site } = Astro.params;
+---
+<LatestView siteId={site ?? ""} />

@@ -1,0 +1,6 @@
+---
+import MediaPage from "../../components/MediaPage.astro";
+import { siteById } from "../../lib/sites";
+const site = siteById("blog");
+---
+<MediaPage site={site} />

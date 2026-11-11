@@ -1,0 +1,104 @@
+---
+import Base from "../../layouts/Base.astro";
+import Breadcrumb from "../../components/Breadcrumb.astro";
+import SnsList from "../../components/SnsList.astro";
+import { portal, sites, snsPlatforms } from "../../lib/sites";
+
+function account(siteId: string, platform: string) {
+  return sites.find((s) => s.id === siteId)?.sns.filter((a) => a.platform === platform) ?? [];
+}
+
+const platformsOn = snsPlatforms.filter((p) =>
+  sites.some((s) => s.sns.some((a) => a.platform === p.id))
+);
+---
+<Base
+  title="SNS一覧"
+  description={`${portal.name}の4メディアについて、確認できたSNSアカウントを媒体×プラットフォームでまとめています。`}
+  path="sns/"
+>
+  <Breadcrumb items={[{ label: "SNS一覧" }]} />
+  <header class="page-hero wrap">
+    <div class="kicker">FOLLOW</div>
+    <h1>SNSを、媒体ごとにまとめて見る</h1>
+    <p>確認できたアカウントだけ載せています。カゴシマニアックスのFacebook、かごしま情報ブログのFacebook、カゴシマーケティングのYouTube、Threads、Blueskyは、確認が取れるまで載せていません。</p>
+    <ul class="toc">
+      <li><a href="#matrix">マトリクス</a></li>
+      {sites.map((s) => <li><a href={`#${s.id}`}>{s.short}</a></li>)}
+      <li><a href="#platforms">プラットフォーム別</a></li>
+    </ul>
+  </header>
+
+  <section class="section wrap" id="matrix">
+    <h2>媒体 × プラットフォーム</h2>
+    <p class="sec-lead">空欄は「ない」ではなく「このポータルでは未掲載」です。</p>
+    <div class="matrix-wrap">
+      <table class="matrix">
+        <thead>
+          <tr>
+            <th>メディア</th>
+            {platformsOn.map((p) => <th>{p.label}</th>)}
+          </tr>
+        </thead>
+        <tbody>
+          {sites.map((s) => (
+            <tr>
+              <th scope="row">{s.name}</th>
+              {platformsOn.map((p) => {
+                const list = account(s.id, p.id);
+                return (
+                  <td>
+                    {list.length === 0 ? (
+                      <span class="empty">—</span>
+                    ) : (
+                      list.map((a) => (
+                        <>
+                          <a href={a.url} target="_blank" rel="noopener">{a.note ?? a.handle}</a>
+                          {list.length > 1 && a !== list[list.length - 1] ? <br /> : null}
+                        </>
+                      ))
+                    )}
+                  </td>
+                );
+              })}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  {sites.map((s) => (
+    <section class="section wrap" id={s.id}>
+      <h2>{s.name}</h2>
+      <p class="sec-lead">{s.role}。公式サイトは <a href={s.url} target="_blank" rel="noopener">{s.host}</a></p>
+      <SnsList accounts={s.sns} color={s.colors.primary} />
+    </section>
+  ))}
+
+  <section class="section wrap" id="platforms">
+    <h2>プラットフォーム別</h2>
+    <p class="sec-lead">同じアプリの中で、媒体を横並びで開けます。</p>
+    <div class="grid-2">
+      {platformsOn.map((p) => (
+        <div class="panel">
+          <h3>{p.label}</h3>
+          <ul class="sns">
+            {sites.flatMap((s) =>
+              s.sns
+                .filter((a) => a.platform === p.id)
+                .map((a) => (
+                  <li>
+                    <a href={a.url} target="_blank" rel="noopener">
+                      <b>{s.short}</b>
+                      <span class="sub">{a.note ?? a.handle}</span>
+                    </a>
+                  </li>
+                ))
+            )}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </section>
+</Base>

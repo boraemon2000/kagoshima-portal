@@ -1,0 +1,68 @@
+---
+import Base from "../../layouts/Base.astro";
+import Breadcrumb from "../../components/Breadcrumb.astro";
+import { portal, aboutSections, faq, sites, path } from "../../lib/sites";
+---
+<Base
+  title="このポータルについて"
+  description="カゴシマ メディアポータルの運営方針。4メディアの役割、掲載しないもの、個人情報を集めない静的サイトであること。"
+  path="about/"
+>
+  <Breadcrumb items={[{ label: "このポータルについて" }]} />
+  <header class="page-hero wrap">
+    <div class="kicker">ABOUT</div>
+    <h1>入口をひとつに。本文は各メディアで。</h1>
+    <p>{portal.lead}</p>
+  </header>
+
+  <section class="section wrap">
+    <h2>何のためのサイトか</h2>
+    <ul class="checklist">
+      {portal.mission.map((m) => <li>{m}</li>)}
+    </ul>
+  </section>
+
+  {aboutSections.map((sec) => (
+    <section class="section wrap">
+      <h2>{sec.title}</h2>
+      <div class="panel prose">
+        <p>{sec.body}</p>
+      </div>
+    </section>
+  ))}
+
+  <section class="section wrap">
+    <h2>4メディア</h2>
+    <div class="guides">
+      {sites.map((s) => (
+        <a class="guide" href={path(`${s.id}/`)} style={`--c:${s.colors.primary}`}>
+          <p class="tag">{s.role}</p>
+          <h3>{s.name}</h3>
+          <p>{s.description}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="section wrap">
+    <h2>書いていないこと</h2>
+    <ul class="checklist">
+      {portal.notThis.map((m) => <li>{m}</li>)}
+      <li>運営者・編集長の個人名</li>
+      <li>出典のないPV、フォロワー数、受賞歴、導入企業ロゴ</li>
+      <li>根拠のない最上級表現</li>
+    </ul>
+  </section>
+
+  <section class="section wrap">
+    <h2>よくある質問</h2>
+    <div class="post-list">
+      {faq.map((item) => (
+        <details class="faq">
+          <summary>{item.q}</summary>
+          <p>{item.a}</p>
+        </details>
+      ))}
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,459 @@
+{
+  "portal": {
+    "name": "カゴシマ メディアポータル",
+    "nameEn": "KAGOSHIMA MEDIA PORTAL",
+    "tagline": "鹿児島の「知りたい」に、4つのメディアで答えます",
+    "description": "グルメ・イベントから、プレスリリース、地域のマーケティング、公式発表まで。鹿児島の4メディアのサイトとSNSを、ここからまとめてたどれます。",
+    "canonicalOrigin": "https://boraemon2000.github.io/kagoshima-portal",
+    "ogImage": "/og.png",
+    "year": 2026,
+    "lead": "お店の話題、企業の発表、数字の読み方、行政の公式情報。役割の違う4つのメディアを、入口だけひとつにまとめました。記事そのものは各サイトで読んでください。",
+    "mission": [
+      "4メディアのあいだを行き来しやすくする",
+      "「鹿児島の情報メディア」としての入口をはっきりさせる",
+      "フォローしたいSNSを、媒体ごとに迷わず開けるようにする"
+    ],
+    "notThis": [
+      "このポータルに問い合わせフォームはありません。連絡は各メディアの既存ページへ",
+      "数字・受賞・順位は、出典を確認できたもの以外は書きません",
+      "掲載しているのは自社の4メディアだけです"
+    ]
+  },
+  "snsPlatforms": [
+    { "id": "instagram", "label": "Instagram" },
+    { "id": "x", "label": "X" },
+    { "id": "facebook", "label": "Facebook" },
+    { "id": "youtube", "label": "YouTube" },
+    { "id": "tiktok", "label": "TikTok" },
+    { "id": "line", "label": "LINE" },
+    { "id": "note", "label": "note" }
+  ],
+  "sites": [
+    {
+      "id": "niax",
+      "name": "カゴシマニアックス",
+      "short": "ニアックス",
+      "url": "https://kagoshimaniax.com/",
+      "host": "kagoshimaniax.com",
+      "role": "グルメ・新店・イベント",
+      "kicker": "街のいまを、アツくユルく",
+      "description": "鹿児島の今をアツくユルく伝えるウェブメディア。ごはん、新店、イベント、街の話題を扱います。チェーン店の新メニューから、地元のお店の一皿まで、食べて歩いた記録が中心です。",
+      "long": "「今日、何食べよう」「今週末、どこ行こう」「あの通りに新しい店、開いた？」——日々の鹿児島を、本文で追うメディアです。速報の公式発表そのものより、現場の匂いとメニューの感想に寄っています。観光ガイドというより、地元のウェブ版まち歩きに近い読みものです。",
+      "howToRead": [
+        "お腹が空いたら、グルメとランチ・ディナーの入口から",
+        "新しいお店を探すなら、新規オープンと新店まとめから",
+        "今週末の予定は、イベントの入口から",
+        "チェーン店の新作だけ見たいときは、Instagramのチェーン店アカウントも便利です"
+      ],
+      "whenToOpen": [
+        "今日のごはんを決めたい",
+        "新店やリニューアルを追いたい",
+        "イベントやお祭りを探したい",
+        "期間限定メニューをチェックしたい"
+      ],
+      "colors": { "primary": "#d92b2b", "secondary": "#ffd23f" },
+      "feed": {
+        "rest": "https://kagoshimaniax.com/wp-json/wp/v2/posts",
+        "rss": "https://kagoshimaniax.com/feed/"
+      },
+      "hubs": [
+        { "label": "グルメ", "url": "https://kagoshimaniax.com/gourmet/", "blurb": "ごはん・お店の記事の入口" },
+        { "label": "ランチ", "url": "https://kagoshimaniax.com/gourmet/lunch/", "blurb": "昼ごはん" },
+        { "label": "ディナー", "url": "https://kagoshimaniax.com/gourmet/dinner/", "blurb": "夜ごはん" },
+        { "label": "パン・スイーツ", "url": "https://kagoshimaniax.com/gourmet/sweets/", "blurb": "甘いもの" },
+        { "label": "カフェ・お茶", "url": "https://kagoshimaniax.com/gourmet/cafe/", "blurb": "カフェと飲み物" },
+        { "label": "居酒屋", "url": "https://kagoshimaniax.com/gourmet/bar/", "blurb": "バー・居酒屋" },
+        { "label": "新規オープン", "url": "https://kagoshimaniax.com/topicnews/openclose/", "blurb": "開店・新店の話題" },
+        { "label": "新店まとめ（2015年〜）", "url": "https://kagoshimaniax.com/kagoshima-open/", "blurb": "年ごとのオープン記録" },
+        { "label": "新メニュー", "url": "https://kagoshimaniax.com/topicnews/newmenu/", "blurb": "期間限定や新作" },
+        { "label": "イベント", "url": "https://kagoshimaniax.com/siteseeing/events/", "blurb": "お祭り・催し" },
+        { "label": "観光・泊まる", "url": "https://kagoshimaniax.com/siteseeing/", "blurb": "出かける記事の入口" },
+        { "label": "話題・ニュース", "url": "https://kagoshimaniax.com/topicnews/", "blurb": "街の話題" }
+      ],
+      "sns": [
+        { "platform": "instagram", "label": "Instagram", "handle": "kagoshimaniax", "url": "https://www.instagram.com/kagoshimaniax/" },
+        { "platform": "instagram", "label": "Instagram", "handle": "kagoshimaniax_jpn", "url": "https://www.instagram.com/kagoshimaniax_jpn/", "note": "チェーン店特化" },
+        { "platform": "x", "label": "X", "handle": "kagoshimaniax", "url": "https://x.com/kagoshimaniax" },
+        { "platform": "youtube", "label": "YouTube", "handle": "チャンネル", "url": "https://www.youtube.com/channel/UCxB4gSD41l4Eg7Xj2rNx-DQ" },
+        { "platform": "tiktok", "label": "TikTok", "handle": "@kagoshimaniax", "url": "https://www.tiktok.com/@kagoshimaniax" },
+        { "platform": "line", "label": "LINE", "handle": "@oa-kagoshimaniax", "url": "https://line.me/R/ti/p/%40oa-kagoshimaniax" },
+        { "platform": "note", "label": "note", "handle": "kagoshimaniax", "url": "https://note.com/kagoshimaniax" }
+      ],
+      "related": ["news", "blog"],
+      "relatedNote": "お店の公式発表を読みたいときはプレスリリースかごしま、行政の告知を確かめたいときはかごしま情報ブログへ。",
+      "business": [
+        { "label": "取材・掲載の相談", "url": "https://kagoshimaniax.com/ads/" },
+        { "label": "取材・記事掲載依頼", "url": "https://kagoshimaniax.com/keisaiirai/" },
+        { "label": "お問い合わせ", "url": "https://kagoshimaniax.com/contact/" }
+      ],
+      "aboutUrl": "https://kagoshimaniax.com/top/aboutus/"
+    },
+    {
+      "id": "news",
+      "name": "プレスリリースかごしま",
+      "short": "PRかごしま",
+      "url": "https://kagoshima.news/",
+      "host": "kagoshima.news",
+      "role": "プレスリリース配信",
+      "kicker": "鹿児島発の発表を、まとめて読む",
+      "description": "鹿児島発のプレスリリース配信サイト。県内の企業・団体の新商品、新サービス、イベントなどの発表を掲載します。広報の書き方を学ぶコラムと、掲載依頼の窓口もあります。",
+      "long": "誰が、何を、いつ発表したのか。一次情報に近い形で読む場所です。感想記事やグルメレポートとは役割が違います。自分たちの催しや新商品を届けたいときも、まずここへ送る、という使い方です。",
+      "howToRead": [
+        "企業や団体の発表を追うなら、プレスリリースの一覧から",
+        "イベント告知だけ見たいときは、イベント告知の入口から",
+        "出し方を学びたいときは、広報プログラムとコラムへ",
+        "自分たちの発表を載せたいときは、送付案内のページへ"
+      ],
+      "whenToOpen": [
+        "県内企業の新商品や新店の発表を知りたい",
+        "イベントの公式告知を読みたい",
+        "自分たちのプレスリリースを載せたい",
+        "広報の基本を、鹿児島の文脈で学びたい"
+      ],
+      "colors": { "primary": "#1d4ed8", "secondary": "#38bdf8" },
+      "feed": {
+        "rest": "https://kagoshima.news/wp-json/wp/v2/posts",
+        "rss": "https://kagoshima.news/feed/"
+      },
+      "hubs": [
+        { "label": "プレスリリース", "url": "https://kagoshima.news/pressrelease", "blurb": "発表の一覧" },
+        { "label": "イベント告知", "url": "https://kagoshima.news/event", "blurb": "催しの告知" },
+        { "label": "無料掲載・送付案内", "url": "https://kagoshima.news/submit", "blurb": "掲載の依頼はこちら" },
+        { "label": "掲載依頼フォーム", "url": "https://kagoshima.news/pr-request-form", "blurb": "フォームから送る" },
+        { "label": "広報プログラム", "url": "https://kagoshima.news/pr-program", "blurb": "コラム・セミナー・ツール" },
+        { "label": "PESOジェネレーター", "url": "https://kagoshima.news/peso-generator", "blurb": "広報の整理に使う無料ツール" },
+        { "label": "イベントのプレスリリース", "url": "https://kagoshima.news/pressrelease-event", "blurb": "催しの書き方" },
+        { "label": "お問い合わせ", "url": "https://kagoshima.news/contact", "blurb": "掲載以外の連絡" }
+      ],
+      "sns": [
+        { "platform": "instagram", "label": "Instagram", "handle": "pressrelease.kagoshima", "url": "https://www.instagram.com/pressrelease.kagoshima/" },
+        { "platform": "x", "label": "X", "handle": "press_kagoshima", "url": "https://x.com/press_kagoshima" },
+        { "platform": "facebook", "label": "Facebook", "handle": "pressrelease.kagoshima", "url": "https://www.facebook.com/pressrelease.kagoshima/" }
+      ],
+      "related": ["mkt", "niax"],
+      "relatedNote": "発表のあとに集客や数字を考えたいときはカゴシマーケティング、現場の雰囲気を読者向けに伝えたいときはカゴシマニアックスへ。",
+      "business": [
+        { "label": "プレスリリースの送付・無料掲載", "url": "https://kagoshima.news/submit" },
+        { "label": "掲載依頼フォーム", "url": "https://kagoshima.news/pr-request-form" },
+        { "label": "お問い合わせ", "url": "https://kagoshima.news/contact" }
+      ],
+      "aboutUrl": "https://kagoshima.news/submit"
+    },
+    {
+      "id": "mkt",
+      "name": "カゴシマーケティング",
+      "short": "マーケ",
+      "url": "https://kagoshimarketing.com/",
+      "host": "kagoshimarketing.com",
+      "role": "地域マーケティング・統計",
+      "kicker": "数字を、鹿児島の文脈で読む",
+      "description": "鹿児島の中小企業・店舗向けに、地域マーケティングと統計データの読み方を扱うメディア。家計調査や県の統計など、出典の明記されたデータを記事にしています。",
+      "long": "「県の人口は今どう動いているか」「鹿児島市の支出は、他都市と比べてどこが厚いか」。公的統計を、店舗や事業所の判断材料になる粒度まで下ろして読む場所です。グルメ記事でも、プレスリリースそのものでもありません。数字の出典と、読み方の注意（単年・標本が少ない、など）を本文に残すスタイルです。",
+      "howToRead": [
+        "最新の県統計や人口は、鹿児島統計データの入口から",
+        "考え方の土台は、基礎知識・マーケ知識から",
+        "県民向けのアンケート結果は、アンケートの入口から",
+        "Web集客の相談は、案内ページとフォームへ（ポータルでは受け付けません）"
+      ],
+      "whenToOpen": [
+        "商圏や人口の話を、出典つきで確認したい",
+        "家計調査など公的統計を鹿児島視点で読みたい",
+        "SNSや集客の基本を、地域の文脈で学びたい",
+        "Web集客の相談先を探している"
+      ],
+      "colors": { "primary": "#0f8a6c", "secondary": "#a3e635" },
+      "feed": {
+        "rest": "https://kagoshimarketing.com/wp-json/wp/v2/posts",
+        "rss": "https://kagoshimarketing.com/feed/"
+      },
+      "hubs": [
+        { "label": "鹿児島統計データ", "url": "https://kagoshimarketing.com/%e9%b9%bf%e5%85%90%e5%b3%b6%e7%b5%b1%e8%a8%88%e3%83%87%e3%83%bc%e3%82%bf/", "blurb": "公的統計の解説" },
+        { "label": "基礎知識", "url": "https://kagoshimarketing.com/%e5%9f%ba%e7%a4%8e%e7%9f%a5%e8%ad%98/", "blurb": "地域マーケの土台" },
+        { "label": "マーケ知識", "url": "https://kagoshimarketing.com/%e3%83%9e%e3%83%bc%e3%82%b1%e7%9f%a5%e8%ad%98/", "blurb": "考え方の整理" },
+        { "label": "アンケート", "url": "https://kagoshimarketing.com/%e3%82%a2%e3%83%b3%e3%82%b1%e3%83%bc%e3%83%88/", "blurb": "県民向け調査" },
+        { "label": "SNSマーケティング", "url": "https://kagoshimarketing.com/sns%e3%83%9e%e3%83%bc%e3%82%b1%e3%83%86%e3%82%a3%e3%83%b3%e3%82%b0/", "blurb": "SNSの話" },
+        { "label": "Web集客のご案内", "url": "https://kagoshimarketing.com/service/", "blurb": "伴走支援の案内（料金は先方ページで）" },
+        { "label": "お問い合わせ・無料診断", "url": "https://kagoshimarketing.com/contact/", "blurb": "相談フォーム" }
+      ],
+      "sns": [
+        { "platform": "instagram", "label": "Instagram", "handle": "kagoshimarketing", "url": "https://www.instagram.com/kagoshimarketing/" },
+        { "platform": "x", "label": "X", "handle": "kgsm_marketing", "url": "https://x.com/kgsm_marketing" },
+        { "platform": "facebook", "label": "Facebook", "handle": "ページ", "url": "https://www.facebook.com/profile.php?id=1217703081436502" }
+      ],
+      "related": ["news", "niax"],
+      "relatedNote": "発表そのものを載せたいときはプレスリリースかごしま、街の話題として扱ってほしいときはカゴシマニアックスへ。",
+      "business": [
+        { "label": "お問い合わせ・無料診断", "url": "https://kagoshimarketing.com/contact/" },
+        { "label": "Web集客のご案内", "url": "https://kagoshimarketing.com/service/" }
+      ],
+      "aboutUrl": "https://kagoshimarketing.com/"
+    },
+    {
+      "id": "blog",
+      "name": "かごしま情報ブログ",
+      "short": "かごぶろ",
+      "url": "https://kagoshima.blog/",
+      "host": "kagoshima.blog",
+      "role": "自治体・公式情報",
+      "kicker": "確かめた情報を、わかりやすく",
+      "description": "鹿児島の自治体・公式サイトの発表を、出典と日付を確認して届けるサイト。観光ブログではありません。毎週金曜には、その週の公式情報を「今週の鹿児島」にまとめます。",
+      "long": "県や市町村が出した発表のうち、暮らしに関わるものを選んで、出典リンクと情報の日付を付けて記事にします。SNSで話題だから取り上げる、という読み方はしません。公式発表とそれ以外は、分けて扱う方針がサイト自身の「このサイトについて」に書かれています。誤りがあれば、記事内に訂正と日付を残して直します。",
+      "howToRead": [
+        "毎日の新着まとめから、今日の公式発表を眺める",
+        "週の終わりに「今週の鹿児島」で振り返る",
+        "記事本文の出典リンクで、元の公式ページまで戻る",
+        "短い縦型動画は、Instagram と YouTube でも配信しています"
+      ],
+      "whenToOpen": [
+        "行政の発表を、出典つきで確認したい",
+        "申請期限や注意喚起を見逃したくない",
+        "1週間の公式情報をまとめ読みしたい",
+        "観光案内ではなく、暮らしの公式情報を探している"
+      ],
+      "colors": { "primary": "#e0680b", "secondary": "#fbbf24" },
+      "feed": {
+        "rest": "https://kagoshima.blog/wp-json/wp/v2/posts",
+        "rss": "https://kagoshima.blog/feed/"
+      },
+      "hubs": [
+        { "label": "今週の鹿児島", "url": "https://kagoshima.blog/kagoshima-weekly/", "blurb": "毎週金曜の週まとめ" },
+        { "label": "今週の鹿児島（記事一覧）", "url": "https://kagoshima.blog/category/weekly/", "blurb": "週まとめの過去分" },
+        { "label": "最新情報", "url": "https://kagoshima.blog/information/", "blurb": "新着の入口" },
+        { "label": "地域ニュース", "url": "https://kagoshima.blog/category/information/地域ニュース/", "blurb": "日々の公式情報" },
+        { "label": "ショート動画", "url": "https://kagoshima.blog/videos/", "blurb": "縦型の短い動画" },
+        { "label": "このサイトについて", "url": "https://kagoshima.blog/about/", "blurb": "方針と訂正の考え方" },
+        { "label": "関連サイト案内", "url": "https://kagoshima.blog/group/", "blurb": "他メディアへの案内" }
+      ],
+      "sns": [
+        { "platform": "instagram", "label": "Instagram", "handle": "kagoshima_blog", "url": "https://www.instagram.com/kagoshima_blog/" },
+        { "platform": "x", "label": "X", "handle": "kagoshima_blog", "url": "https://x.com/kagoshima_blog" },
+        { "platform": "youtube", "label": "YouTube", "handle": "チャンネル", "url": "https://www.youtube.com/channel/UCBS1fZ9UyZw2Ez43GJklIAQ" }
+      ],
+      "related": ["niax", "news"],
+      "relatedNote": "お祭りやお店の雰囲気はカゴシマニアックス、自治体が自ら出したプレスリリースはプレスリリースかごしまへ。",
+      "business": [],
+      "aboutUrl": "https://kagoshima.blog/about/"
+    }
+  ],
+  "guides": [
+    {
+      "id": "eat",
+      "title": "お店を探したい",
+      "lead": "今日のごはん、いつもの店の新作、ご褒美の一皿。",
+      "body": "食べて歩いた記録はカゴシマニアックスです。公式発表ではなく、現場の感想が中心です。",
+      "siteId": "niax",
+      "links": [
+        { "label": "グルメ", "url": "https://kagoshimaniax.com/gourmet/" },
+        { "label": "ランチ", "url": "https://kagoshimaniax.com/gourmet/lunch/" },
+        { "label": "ディナー", "url": "https://kagoshimaniax.com/gourmet/dinner/" }
+      ]
+    },
+    {
+      "id": "open",
+      "title": "新しくできたお店を知りたい",
+      "lead": "通りに看板が出た、あの場所が入れ替わった。",
+      "body": "開店の話題と、年ごとのオープン記録はカゴシマニアックス。企業側の公式発表だけを読みたいときは、プレスリリースかごしまも併せてどうぞ。",
+      "siteId": "niax",
+      "links": [
+        { "label": "新規オープン", "url": "https://kagoshimaniax.com/topicnews/openclose/" },
+        { "label": "新店まとめ", "url": "https://kagoshimaniax.com/kagoshima-open/" },
+        { "label": "プレスリリース", "url": "https://kagoshima.news/pressrelease" }
+      ]
+    },
+    {
+      "id": "event",
+      "title": "今週末のイベントを探したい",
+      "lead": "お祭り、マルシェ、期間限定の催し。",
+      "body": "雰囲気や行き方の話はカゴシマニアックス。主催者の公式告知はプレスリリースかごしま。県や市の注意喚起・申請期限はかごしま情報ブログです。",
+      "siteId": "niax",
+      "links": [
+        { "label": "イベント（ニアックス）", "url": "https://kagoshimaniax.com/siteseeing/events/" },
+        { "label": "イベント告知（PR）", "url": "https://kagoshima.news/event" },
+        { "label": "公式の最新情報", "url": "https://kagoshima.blog/information/" }
+      ]
+    },
+    {
+      "id": "menu",
+      "title": "期間限定メニューを見たい",
+      "lead": "季節の一品、チェーン店の新作、ご当地コラボ。",
+      "body": "実食の感想はカゴシマニアックス。チェーン店だけ追うなら、Instagramのチェーン店アカウントもあります。",
+      "siteId": "niax",
+      "links": [
+        { "label": "新メニュー", "url": "https://kagoshimaniax.com/topicnews/newmenu/" },
+        { "label": "期間限定", "url": "https://kagoshimaniax.com/gourmet/kikangentei/" },
+        { "label": "Instagram（チェーン店）", "url": "https://www.instagram.com/kagoshimaniax_jpn/" }
+      ]
+    },
+    {
+      "id": "read-pr",
+      "title": "企業や団体の発表を読みたい",
+      "lead": "誰が、何を、いつ発表したのか。",
+      "body": "一次情報に近い読み方をするなら、プレスリリースかごしまです。感想やグルメレポートとは別物です。",
+      "siteId": "news",
+      "links": [
+        { "label": "プレスリリース一覧", "url": "https://kagoshima.news/pressrelease" },
+        { "label": "イベント告知", "url": "https://kagoshima.news/event" }
+      ]
+    },
+    {
+      "id": "send-pr",
+      "title": "プレスリリースを出したい",
+      "lead": "新商品、新店、催しを、まず形にして届けたい。",
+      "body": "掲載の依頼はプレスリリースかごしまの案内ページとフォームへ。ポータルでは受け付けません。書き方の整理は広報プログラムも使えます。",
+      "siteId": "news",
+      "links": [
+        { "label": "送付・無料掲載の案内", "url": "https://kagoshima.news/submit" },
+        { "label": "掲載依頼フォーム", "url": "https://kagoshima.news/pr-request-form" },
+        { "label": "広報プログラム", "url": "https://kagoshima.news/pr-program" }
+      ]
+    },
+    {
+      "id": "learn-pr",
+      "title": "広報の書き方を学びたい",
+      "lead": "送り方、写真、日程、問い合わせ窓口。",
+      "body": "鹿児島の広報担当向けに、コラムとツールがプレスリリースかごしまにまとまっています。",
+      "siteId": "news",
+      "links": [
+        { "label": "広報プログラム", "url": "https://kagoshima.news/pr-program" },
+        { "label": "PESOジェネレーター", "url": "https://kagoshima.news/peso-generator" },
+        { "label": "イベントの書き方", "url": "https://kagoshima.news/pressrelease-event" }
+      ]
+    },
+    {
+      "id": "learn-mkt",
+      "title": "集客を学びたい",
+      "lead": "商圏、SNS、県民の支出の偏り。",
+      "body": "考え方とデータの読み方はカゴシマーケティング。相談そのものは先方のフォームへ。",
+      "siteId": "mkt",
+      "links": [
+        { "label": "基礎知識", "url": "https://kagoshimarketing.com/%e5%9f%ba%e7%a4%8e%e7%9f%a5%e8%ad%98/" },
+        { "label": "マーケ知識", "url": "https://kagoshimarketing.com/%e3%83%9e%e3%83%bc%e3%82%b1%e7%9f%a5%e8%ad%98/" },
+        { "label": "相談フォーム", "url": "https://kagoshimarketing.com/contact/" }
+      ]
+    },
+    {
+      "id": "stats",
+      "title": "統計・人口データを確認したい",
+      "lead": "県の統計、家計調査、宿泊、出生。出典のある数字だけ。",
+      "body": "カゴシマーケティングが、公的統計を鹿児島の文脈で解説しています。ポータル側で数字を抜き出して再掲はしません。本文と出典を、先方の記事で確認してください。",
+      "siteId": "mkt",
+      "links": [
+        { "label": "鹿児島統計データ", "url": "https://kagoshimarketing.com/%e9%b9%bf%e5%85%90%e5%b3%b6%e7%b5%b1%e8%a8%88%e3%83%87%e3%83%bc%e3%82%bf/" }
+      ]
+    },
+    {
+      "id": "official",
+      "title": "行政の発表を確かめたい",
+      "lead": "申請、注意喚起、期限。元の公式ページまで戻りたい。",
+      "body": "かごしま情報ブログは、出典と日付を付けて公式情報を届けるサイトです。観光案内ではありません。",
+      "siteId": "blog",
+      "links": [
+        { "label": "最新情報", "url": "https://kagoshima.blog/information/" },
+        { "label": "地域ニュース", "url": "https://kagoshima.blog/category/information/地域ニュース/" },
+        { "label": "このサイトについて", "url": "https://kagoshima.blog/about/" }
+      ]
+    },
+    {
+      "id": "weekly",
+      "title": "1週間の公式発表をまとめ読みしたい",
+      "lead": "毎日は追いきれない。金曜に振り返りたい。",
+      "body": "「今週の鹿児島」は、その週の公式情報をまとめるページです。毎週金曜の更新が案内されています。",
+      "siteId": "blog",
+      "links": [
+        { "label": "今週の鹿児島", "url": "https://kagoshima.blog/kagoshima-weekly/" },
+        { "label": "週まとめの一覧", "url": "https://kagoshima.blog/category/weekly/" }
+      ]
+    },
+    {
+      "id": "consult",
+      "title": "Web集客の相談先を探している",
+      "lead": "サイトは作った。その先を、鹿児島の文脈で話したい。",
+      "body": "相談窓口はカゴシマーケティングの案内とフォームです。料金や範囲は先方のページを見てください。発表をまず載せたいだけなら、プレスリリースかごしまの方が近いです。",
+      "siteId": "mkt",
+      "links": [
+        { "label": "Web集客のご案内", "url": "https://kagoshimarketing.com/service/" },
+        { "label": "お問い合わせ", "url": "https://kagoshimarketing.com/contact/" },
+        { "label": "プレスリリース掲載", "url": "https://kagoshima.news/submit" }
+      ]
+    }
+  ],
+  "businessPaths": [
+    {
+      "id": "publish",
+      "title": "発表を載せたい",
+      "siteId": "news",
+      "body": "新商品、新店、イベント、地域の取り組み。まずはプレスリリースかごしまの案内を読んで、フォームから送ってください。ポータルでは原稿を受け付けません。",
+      "steps": [
+        "送付案内で、無料掲載の流れを確認する",
+        "タイトル・本文・画像・連絡先をフォームから送る",
+        "書き方に迷ったら、広報プログラムのコラムを先に読む"
+      ]
+    },
+    {
+      "id": "marketing",
+      "title": "集客やデータの相談をしたい",
+      "siteId": "mkt",
+      "body": "統計の読み方、サイトや地図の改善、発信の続け方。カゴシマーケティングの案内ページとフォームへ進んでください。料金や支援の範囲は、先方のページが正です。",
+      "steps": [
+        "案内ページで、何を相談できるかを読む",
+        "フォームから問い合わせる",
+        "数字の出典を記事で先に確認してから相談すると話が早いです"
+      ]
+    },
+    {
+      "id": "feature",
+      "title": "お店の話題として取り上げてほしい",
+      "siteId": "niax",
+      "body": "実食や現場の記事として扱ってほしい場合は、カゴシマニアックスの掲載・取材案内へ。公式発表の掲載とは窓口が違います。",
+      "steps": [
+        "掲載・取材の案内を読む",
+        "依頼フォームまたは問い合わせから連絡する",
+        "公式発表も残したいときは、プレスリリースかごしまへ並行して送る"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "このポータルは、何のためのページですか",
+      "a": "鹿児島の4メディア（カゴシマニアックス、プレスリリースかごしま、カゴシマーケティング、かごしま情報ブログ）のサイトとSNSを、入口としてまとめた静的なページです。記事の本文は各サイトにあります。"
+    },
+    {
+      "q": "どれを読めばいいか、迷います",
+      "a": "お店とイベントはカゴシマニアックス、企業の発表はプレスリリースかごしま、統計と集客の話はカゴシマーケティング、行政の公式情報はかごしま情報ブログ、が目安です。目的別ナビからもたどれます。"
+    },
+    {
+      "q": "問い合わせはどこへ送ればいいですか",
+      "a": "ポータルにはフォームがありません。掲載、取材、集客の相談は、各メディアの既存ページへどうぞ。事業者向けのページに、窓口のリンクをまとめています。"
+    },
+    {
+      "q": "新着は、どのくらいの頻度で更新されますか",
+      "a": "各サイトの公開済み記事を、GitHub Actions が定期的に読みにいきます。下書きは出ません。取得に失敗した回は、前回分をそのまま表示します。"
+    },
+    {
+      "q": "SNSが足りないように見えます",
+      "a": "確認できたアカウントだけを載せています。確認が取れていないものは、推測で足していません。"
+    },
+    {
+      "q": "数字や「No.1」は、どこに書いてありますか",
+      "a": "このポータルには書いていません。実績や順位が必要な場合は、各メディアの本文と出典を見てください。"
+    }
+  ],
+  "aboutSections": [
+    {
+      "title": "4つの役割",
+      "body": "カゴシマニアックスは街の話題とごはん。プレスリリースかごしまは企業・団体の発表。カゴシマーケティングは統計と地域マーケティングの読み方。かごしま情報ブログは、自治体などの公式情報を出典と日付つきで届ける役割です。同じ「鹿児島の情報」でも、立ち位置が違います。"
+    },
+    {
+      "title": "ポータルでやること、やらないこと",
+      "body": "やることは、入口の整理と相互の案内です。やらないことは、ここでの原稿受付、個人名の紹介、出典のない数字の再掲、確認していないSNSの掲載です。画像は、権利が明確なもの以外は使いません。このサイトは色と文字で構成しています。"
+    },
+    {
+      "title": "編集の考え方（各メディア）",
+      "body": "ニアックスは、現場で見たもの・食べたものを中心にします。プレスリリースかごしまは、発表者の情報を届ける窓口と、広報の学びを分けて持っています。カゴシマーケティングは、公的統計の出典を本文に残します。かごしま情報ブログは、公式発表とそれ以外を分け、誤りがあれば訂正と日付を記事に残す、と案内しています。"
+    },
+    {
+      "title": "このサイトの技術",
+      "body": "静的サイトです。閲覧者の個人情報を集めるフォームはありません。新着一覧だけ、公開されている記事API（またはRSS）を定期的に読み、JSONとして保存しています。認証は使いません。"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+---
+import { portal, sites, path } from "../lib/sites";
+---
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <strong>{portal.name}</strong>
+      <p>{portal.description}</p>
+      <p>© {portal.year} {portal.name}</p>
+    </div>
+    <div class="foot-nav">
+      <strong>メディア</strong>
+      {sites.map((s) => (
+        <a href={path(`${s.id}/`)}>{s.name}</a>
+      ))}
+    </div>
+    <div class="foot-nav">
+      <strong>このサイト</strong>
+      <a href={path("latest/")}>新着フィード</a>
+      <a href={path("sns/")}>SNS一覧</a>
+      <a href={path("guide/")}>目的別ナビ</a>
+      <a href={path("for-business/")}>事業者の方へ</a>
+      <a href={path("about/")}>運営方針</a>
+    </div>
+  </div>
+</footer>

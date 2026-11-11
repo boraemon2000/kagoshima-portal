@@ -1,0 +1,15 @@
+---
+import type { SnsAccount } from "../lib/sites";
+type Props = { accounts: SnsAccount[]; color?: string };
+const { accounts, color } = Astro.props;
+---
+<ul class="sns" style={color ? `--c:${color}` : undefined}>
+  {accounts.map((s) => (
+    <li>
+      <a href={s.url} target="_blank" rel="noopener">
+        <b>{s.label}</b>
+        {s.note ? <span class="sub">{s.note}</span> : <span class="sub">{s.handle}</span>}
+      </a>
+    </li>
+  ))}
+</ul>
