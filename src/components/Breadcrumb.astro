@@ -1,10 +1,10 @@
 ---
 import { path } from "../lib/sites";
 type Crumb = { href?: string; label: string };
-type Props = { items: Crumb[] };
-const { items } = Astro.props;
+type Props = { items: Crumb[]; bare?: boolean };
+const { items, bare = false } = Astro.props;
 ---
-<nav class="crumbs wrap" aria-label="パンくず">
+<nav class={bare ? "crumbs" : "crumbs wrap"} aria-label="パンくず">
   <a href={path("/")}>トップ</a>
   {items.map((item) => (
     <>

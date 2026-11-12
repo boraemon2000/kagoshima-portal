@@ -16,7 +16,7 @@ const description = site
   : "カゴシマニアックス、プレスリリースかごしま、カゴシマーケティング、かごしま情報ブログの公開済み記事を横断して表示します。";
 ---
 <Base title={title} description={description} path={pagePath}>
-  <Breadcrumb items={[{ href: "latest/", label: "新着フィード" }, ...(site ? [{ label: site.short }] : [])]} />
+  <Breadcrumb items={[{ href: "latest/", label: "新着フィード" }, ...(site ? [{ label: site.name }] : [])]} />
   <header class="page-hero wrap">
     <div class="kicker">LATEST</div>
     <h1>{site ? `${site.name}の新着` : "4メディアの新着"}</h1>
@@ -32,7 +32,7 @@ const description = site
     <div class="filters" aria-label="メディアで絞り込み">
       <a class="chip" href={path("latest/")} aria-current={active ? undefined : "page"}>すべて</a>
       {sites.map((s) => (
-        <a class="chip" href={path(`latest/${s.id}/`)} aria-current={active === s.id ? "page" : undefined}>{s.short}</a>
+        <a class="chip" href={path(`latest/${s.id}/`)} aria-current={active === s.id ? "page" : undefined}>{s.name}</a>
       ))}
     </div>
     <PostList posts={posts} showSite={!active} />

@@ -1,8 +1,12 @@
 ---
-import { portal, sites, path } from "../lib/sites";
+import { asset, portal, sites, path } from "../lib/sites";
 ---
 <footer class="site-footer">
-  <div class="wrap footer-grid">
+  <div class="wrap">
+    <div class="foot-flag" aria-hidden="true">
+      {sites.map((s) => <span style={`background:${s.colors.primary}`}></span>)}
+    </div>
+  <div class="footer-grid">
     <div>
       <strong>{portal.name}</strong>
       <p>{portal.description}</p>
@@ -11,7 +15,10 @@ import { portal, sites, path } from "../lib/sites";
     <div class="foot-nav">
       <strong>メディア</strong>
       {sites.map((s) => (
-        <a href={path(`${s.id}/`)}>{s.name}</a>
+        <a class="foot-media" href={path(`${s.id}/`)}>
+          <img src={asset(s.mark ?? s.logo)} alt="" width="28" height="28" />
+          {s.name}
+        </a>
       ))}
     </div>
     <div class="foot-nav">
@@ -22,5 +29,6 @@ import { portal, sites, path } from "../lib/sites";
       <a href={path("for-business/")}>事業者の方へ</a>
       <a href={path("about/")}>運営方針</a>
     </div>
+  </div>
   </div>
 </footer>

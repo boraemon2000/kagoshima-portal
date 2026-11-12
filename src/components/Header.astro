@@ -1,10 +1,12 @@
 ---
-import { portal, sites, nav, path } from "../lib/sites";
+import { asset, portal, sites, nav, path } from "../lib/sites";
 ---
 <header class="site-header">
   <div class="wrap header-inner">
     <a class="brand" href={path("/")}>
-      <small>{portal.nameEn}</small>
+      <span class="mark" aria-hidden="true">
+        {sites.map((s) => <i style={`background:${s.colors.primary}`}></i>)}
+      </span>
       <strong>
         <span class="brand-full">{portal.name}</span>
         <span class="brand-short">カゴシマ</span>
@@ -16,7 +18,7 @@ import { portal, sites, nav, path } from "../lib/sites";
         <div class="sub">
           {sites.map((s) => (
             <a href={path(`${s.id}/`)}>
-              <span class="dot" style={`--c:${s.colors.primary}`}></span>
+              <img class="nav-logo" src={asset(s.mark ?? s.logo)} alt="" width="28" height="28" />
               {s.name}
             </a>
           ))}

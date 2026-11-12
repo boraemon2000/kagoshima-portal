@@ -32,7 +32,7 @@
     {
       "id": "niax",
       "name": "カゴシマニアックス",
-      "short": "ニアックス",
+      "short": "カゴシマニアックス",
       "url": "https://kagoshimaniax.com/",
       "host": "kagoshimaniax.com",
       "role": "グルメ・新店・イベント",
@@ -52,6 +52,8 @@
         "期間限定メニューをチェックしたい"
       ],
       "colors": { "primary": "#d92b2b", "secondary": "#ffd23f" },
+      "logo": "/logos/niax-char.png",
+      "wordmark": "/logos/niax-word.png",
       "feed": {
         "rest": "https://kagoshimaniax.com/wp-json/wp/v2/posts",
         "rss": "https://kagoshimaniax.com/feed/"
@@ -111,6 +113,8 @@
         "広報の基本を、鹿児島の文脈で学びたい"
       ],
       "colors": { "primary": "#1d4ed8", "secondary": "#38bdf8" },
+      "logo": "/logos/news-mark.png",
+      "wordmark": "/logos/news-word.png",
       "feed": {
         "rest": "https://kagoshima.news/wp-json/wp/v2/posts",
         "rss": "https://kagoshima.news/feed/"
@@ -162,6 +166,10 @@
         "Web集客の相談先を探している"
       ],
       "colors": { "primary": "#0f8a6c", "secondary": "#a3e635" },
+      "logo": "/logos/mkt-word.png",
+      "logoWide": true,
+      "mark": "/logos/mkt-mark.png",
+      "wordmark": "/logos/mkt-word.png",
       "feed": {
         "rest": "https://kagoshimarketing.com/wp-json/wp/v2/posts",
         "rss": "https://kagoshimarketing.com/feed/"
@@ -211,6 +219,8 @@
         "観光案内ではなく、暮らしの公式情報を探している"
       ],
       "colors": { "primary": "#e0680b", "secondary": "#fbbf24" },
+      "logo": "/logos/blog-mark.jpg",
+      "wordmark": "/logos/blog-mark.jpg",
       "feed": {
         "rest": "https://kagoshima.blog/wp-json/wp/v2/posts",
         "rss": "https://kagoshima.blog/feed/"
@@ -267,7 +277,7 @@
       "body": "雰囲気や行き方の話はカゴシマニアックス。主催者の公式告知はプレスリリースかごしま。県や市の注意喚起・申請期限はかごしま情報ブログです。",
       "siteId": "niax",
       "links": [
-        { "label": "イベント（ニアックス）", "url": "https://kagoshimaniax.com/siteseeing/events/" },
+        { "label": "イベント（カゴシマニアックス）", "url": "https://kagoshimaniax.com/siteseeing/events/" },
         { "label": "イベント告知（PR）", "url": "https://kagoshima.news/event" },
         { "label": "公式の最新情報", "url": "https://kagoshima.blog/information/" }
       ]
@@ -449,7 +459,7 @@
     },
     {
       "title": "編集の考え方（各メディア）",
-      "body": "ニアックスは、現場で見たもの・食べたものを中心にします。プレスリリースかごしまは、発表者の情報を届ける窓口と、広報の学びを分けて持っています。カゴシマーケティングは、公的統計の出典を本文に残します。かごしま情報ブログは、公式発表とそれ以外を分け、誤りがあれば訂正と日付を記事に残す、と案内しています。"
+      "body": "カゴシマニアックスは、現場で見たもの・食べたものを中心にします。プレスリリースかごしまは、発表者の情報を届ける窓口と、広報の学びを分けて持っています。カゴシマーケティングは、公的統計の出典を本文に残します。かごしま情報ブログは、公式発表とそれ以外を分け、誤りがあれば訂正と日付を記事に残す、と案内しています。"
     },
     {
       "title": "このサイトの技術",

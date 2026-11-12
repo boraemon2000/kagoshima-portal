@@ -4,115 +4,62 @@ import MediaCard from "../components/MediaCard.astro";
 import PostList from "../components/PostList.astro";
 import { portal, sites, guides, path, postsFor, latest } from "../lib/sites";
 
-const posts = postsFor(undefined, 12);
+const posts = postsFor(undefined, 8);
 ---
 <Base title={portal.name} description={portal.description} path="">
-  <header class="hero">
-    <div class="wrap">
-      <span class="kicker">{portal.nameEn}</span>
-      <h1>鹿児島の「知りたい」に、<br /><em>4つのメディア</em>で答えます</h1>
-      <p class="lead">{portal.lead}</p>
-      <div class="stripe" aria-hidden="true">
-        {sites.map((s) => <span style={`background:${s.colors.primary}`}></span>)}
+  <header class="mast">
+    <div class="wrap mast-inner">
+      <div>
+        <span class="kicker">{portal.nameEn}  {portal.year}</span>
+        <h1>
+          <span class="word">カゴシマ</span>
+          <span class="word-sub">メディアポータル</span>
+        </h1>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#media">サイトを開く</a>
+          <a class="btn btn-ghost" href="#sns">SNSをフォロー</a>
+          <a class="btn btn-ghost" href={path("guide/")}>どれを見ればいいか</a>
+          <a class="btn btn-ghost" href={path("for-business/")}>発表・相談</a>
+        </div>
       </div>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href={path("guide/")}>どれを見ればいいか</a>
-        <a class="btn btn-ghost" href={path("latest/")}>新着を見る</a>
-        <a class="btn btn-ghost" href={path("sns/")}>SNSをまとめて見る</a>
-        <a class="btn btn-ghost" href={path("for-business/")}>発表・相談したい</a>
+      <div class="mast-flag" aria-hidden="true">
+        {sites.map((s) => <i style={`background:${s.colors.primary}`}></i>)}
       </div>
     </div>
   </header>
 
-  <section class="section wrap" id="media">
-    <h2>4つのメディア</h2>
-    <p class="sec-lead">役割が違います。グルメと発表と統計と公式情報を、同じ箱に混ぜていません。</p>
-    <div class="cards">
-      {sites.map((s) => <MediaCard site={s} />)}
-    </div>
+  <section class="posters" id="media" aria-label="4つのメディア">
+    <h2 class="vh" id="sns">SNSをフォロー</h2>
+    {sites.map((s, i) => <MediaCard site={s} index={i + 1} />)}
   </section>
 
   <section class="section wrap" id="guide">
-    <h2>どれを見ればいい？</h2>
-    <p class="sec-lead">目的から選ぶと迷いにくいです。くわしくは目的別ナビへ。</p>
-    <div class="guides">
+    <h2>どれを見ればいい</h2>
+    <div class="guides tile-guides">
       {guides.slice(0, 6).map((g) => {
         const site = sites.find((s) => s.id === g.siteId)!;
         return (
-          <a class="guide" href={path("guide/") + `#${g.id}`} style={`--c:${site.colors.primary}`}>
-            <p class="tag">{site.short}</p>
+          <a class="guide-tile" href={path("guide/") + `#${g.id}`} style={`--c:${site.colors.primary}`}>
+            <span class="swatch" aria-hidden="true"></span>
             <h3>{g.title}</h3>
-            <p>{g.lead}</p>
           </a>
         );
       })}
     </div>
-    <p style="margin-top:14px"><a href={path("guide/")}>目的別ナビを全部見る</a></p>
+    <p class="more-link"><a href={path("guide/")}>目的別ナビを全部見る</a></p>
   </section>
 
   <section class="section wrap" id="latest">
     <h2>新着</h2>
-    <p class="sec-lead">
-      4サイトの公開済み記事です。
-      {latest.updatedAt ? `最終取得: ${latest.updatedAt.replace("T", " ").replace("Z", " UTC")}` : "まだ自動取得前です。"}
-    </p>
-    <PostList posts={posts} />
-    <p style="margin-top:14px"><a href={path("latest/")}>新着フィードをすべて見る</a></p>
+    {latest.updatedAt && (
+      <p class="sec-lead quiet">{latest.updatedAt.replace("T", " ").replace("Z", " UTC")}</p>
+    )}
+    <PostList posts={posts} compact />
+    <p class="more-link"><a href={path("latest/")}>新着フィードをすべて見る</a></p>
   </section>
 
-  <section class="section wrap" id="sns">
-    <h2>SNS</h2>
-    <p class="sec-lead">確認できたアカウントだけ並べています。未確認のものは載せていません。</p>
-    <div class="grid-2">
-      {sites.map((s) => (
-        <div class="panel" style={`--c:${s.colors.primary}`}>
-          <p class="tag">{s.name}</p>
-          <ul class="sns">
-            {s.sns.map((a) => (
-              <li>
-                <a href={a.url} target="_blank" rel="noopener">
-                  <b>{a.label}</b>
-                  {a.note ? <span class="sub">{a.note}</span> : <span class="sub">{a.handle}</span>}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))}
-    </div>
-    <p style="margin-top:14px"><a href={path("sns/")}>媒体×プラットフォームの表を見る</a></p>
-  </section>
-
-  <section class="section wrap" id="hubs">
-    <h2>先に開きやすい入口</h2>
-    <p class="sec-lead">各サイトの公開ページです。店舗の個別紹介は、営業確認がこのポータルではできないため、ハブへ案内します。</p>
-    <div class="hubs">
-      {sites.flatMap((s) => s.hubs.slice(0, 3).map((h) => (
-        <a class="hub" href={h.url} target="_blank" rel="noopener">
-          <p class="tag" style={`color:${s.colors.primary}`}>{s.short}</p>
-          <h3>{h.label}</h3>
-          <p>{h.blurb}</p>
-        </a>
-      )))}
-    </div>
-  </section>
-
-  <section class="section wrap" id="about">
-    <h2>このポータルについて</h2>
-    <div class="split">
-      <div class="panel prose">
-        <p>{portal.lead}</p>
-        <ul>
-          {portal.mission.map((m) => <li>{m}</li>)}
-        </ul>
-      </div>
-      <div class="panel prose">
-        <p>書いていないこと</p>
-        <ul>
-          {portal.notThis.map((m) => <li>{m}</li>)}
-        </ul>
-        <p><a href={path("about/")}>運営方針を読む</a></p>
-      </div>
-    </div>
-  </section>
+  <p class="wrap about-one">
+    {portal.description}
+    <a href={path("about/")}>運営方針</a>
+  </p>
 </Base>

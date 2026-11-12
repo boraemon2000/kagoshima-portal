@@ -1,7 +1,7 @@
 ---
 import { formatDate, siteById, type LatestPost } from "../lib/sites";
-type Props = { posts: LatestPost[]; showSite?: boolean };
-const { posts, showSite = true } = Astro.props;
+type Props = { posts: LatestPost[]; showSite?: boolean; compact?: boolean };
+const { posts, showSite = true, compact = false } = Astro.props;
 ---
 {posts.length === 0 ? (
   <p class="note">まだ新着を取り込めていません。各メディアのサイトで最新を見てください。</p>
@@ -10,13 +10,16 @@ const { posts, showSite = true } = Astro.props;
     {posts.map((p) => {
       const site = siteById(p.siteId);
       return (
-        <a class="post" href={p.url} target="_blank" rel="noopener" style={`--c:${site.colors.primary}`}>
-          <div class="post-meta">
-            {showSite && <span>{site.name}</span>}
-            <time datetime={p.date}>{formatDate(p.date)}</time>
+        <a class:list={["post", compact && "post-compact"]} href={p.url} target="_blank" rel="noopener" style={`--c:${site.colors.primary}`}>
+          <span class="swatch" aria-hidden="true"></span>
+          <div>
+            <div class="post-meta">
+              {showSite && <span>{site.name}</span>}
+              <time datetime={p.date}>{formatDate(p.date)}</time>
+            </div>
+            <h3>{p.title}</h3>
+            {!compact && p.excerpt && <p>{p.excerpt}</p>}
           </div>
-          <h3>{p.title}</h3>
-          {p.excerpt && <p>{p.excerpt}</p>}
         </a>
       );
     })}

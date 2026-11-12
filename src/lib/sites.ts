@@ -28,6 +28,10 @@ export type Site = {
   howToRead: string[];
   whenToOpen: string[];
   colors: { primary: string; secondary: string };
+  logo: string;
+  logoWide?: boolean;
+  mark?: string;
+  wordmark?: string;
   feed: { rest: string; rss: string };
   hubs: Hub[];
   sns: SnsAccount[];

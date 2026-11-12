@@ -6,12 +6,12 @@ import zlib from "node:zlib";
 
 const width = 1200;
 const height = 630;
+const black = [0, 0, 0];
 const colors = [
-  [0xd9, 0x2b, 0x2b],
-  [0xff, 0xd2, 0x3f],
-  [0x1d, 0x4e, 0xd8],
-  [0x0f, 0x8a, 0x6c],
-  [0xe0, 0x68, 0x0b],
+  [0xe2, 0x3b, 0x3b],
+  [0x3b, 0x6b, 0xff],
+  [0x1a, 0xa5, 0x7a],
+  [0xf0, 0x74, 0x1c],
 ];
 
 function crc32(buf) {
@@ -32,16 +32,9 @@ for (let y = 0; y < height; y++) {
   const row = Buffer.alloc(1 + width * 3);
   row[0] = 0;
   for (let x = 0; x < width; x++) {
-    let rgb;
-    if (y < 18) {
-      rgb = colors[Math.min(4, Math.floor((x / width) * 5))];
-    } else if (y > height - 90) {
-      rgb = colors[Math.min(4, Math.floor((x / width) * 4))];
-    } else {
-      const cream = [0xf4, 0xf1, 0xea];
-      const ink = [0x1c, 0x1a, 0x16];
-      const inBand = y > 210 && y < 330 && x > 80 && x < 1120;
-      rgb = inBand ? ink : cream;
+    let rgb = black;
+    if (x < 80) {
+      rgb = colors[Math.min(3, Math.floor((y / height) * 4))];
     }
     const i = 1 + x * 3;
     row[i] = rgb[0];

@@ -1,21 +1,36 @@
 ---
 import type { Site } from "../lib/sites";
-import { path } from "../lib/sites";
-import SnsList from "./SnsList.astro";
-type Props = { site: Site; compact?: boolean };
-const { site, compact = false } = Astro.props;
+import { asset, path } from "../lib/sites";
+type Props = { site: Site; compact?: boolean; index?: number };
+const { site, index } = Astro.props;
+const n = index != null ? String(index).padStart(2, "0") : "→";
 ---
-<article class="card" style={`--c:${site.colors.primary};--c2:${site.colors.secondary}`}>
-  <div class="band"></div>
-  <div class="body">
-    <span class="tag">{site.role}</span>
-    <h2>{site.name}</h2>
-    <p class="desc">{compact ? site.description : site.long}</p>
-    <a class="go" href={site.url} target="_blank" rel="noopener">
-      <span>サイトを見る <small>{site.host}</small></span>
-      <span aria-hidden="true">→</span>
-    </a>
-    <a class="chip" href={path(`${site.id}/`)}>このメディアの案内</a>
-    <SnsList accounts={site.sns} color={site.colors.primary} />
+<article class="poster" style={`--c:${site.colors.primary}`}>
+  <span class="poster-n" aria-hidden="true">{n}</span>
+  <div class="poster-copy">
+    <img
+      class:list={["poster-logo", site.logoWide && "is-wide"]}
+      src={asset(site.logo)}
+      alt=""
+      width={site.logoWide ? 320 : 96}
+      height={site.logoWide ? 72 : 96}
+    />
+    <p class="tag">{site.role}</p>
+    <h2>
+      <a href={site.url} target="_blank" rel="noopener">{site.name}</a>
+    </h2>
+    <div class="poster-actions">
+      <a class="btn btn-on-color" href={site.url} target="_blank" rel="noopener">
+        サイトを開く
+      </a>
+      <a class="btn btn-on-color-ghost" href={path(`${site.id}/`)}>案内</a>
+    </div>
+    <ul class="poster-sns">
+      {site.sns.map((a) => (
+        <li>
+          <a href={a.url} target="_blank" rel="noopener">{a.note ?? a.label}</a>
+        </li>
+      ))}
+    </ul>
   </div>
 </article>

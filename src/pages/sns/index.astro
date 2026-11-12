@@ -24,7 +24,7 @@ const platformsOn = snsPlatforms.filter((p) =>
     <p>確認できたアカウントだけ載せています。カゴシマニアックスのFacebook、かごしま情報ブログのFacebook、カゴシマーケティングのYouTube、Threads、Blueskyは、確認が取れるまで載せていません。</p>
     <ul class="toc">
       <li><a href="#matrix">マトリクス</a></li>
-      {sites.map((s) => <li><a href={`#${s.id}`}>{s.short}</a></li>)}
+      {sites.map((s) => <li><a href={`#${s.id}`}>{s.name}</a></li>)}
       <li><a href="#platforms">プラットフォーム別</a></li>
     </ul>
   </header>
@@ -90,7 +90,7 @@ const platformsOn = snsPlatforms.filter((p) =>
                 .map((a) => (
                   <li>
                     <a href={a.url} target="_blank" rel="noopener">
-                      <b>{s.short}</b>
+                      <b>{s.name}</b>
                       <span class="sub">{a.note ?? a.handle}</span>
                     </a>
                   </li>

@@ -3,31 +3,43 @@ import Base from "../layouts/Base.astro";
 import Breadcrumb from "./Breadcrumb.astro";
 import SnsList from "./SnsList.astro";
 import PostList from "./PostList.astro";
-import { path, postsFor, relatedSites, type Site } from "../lib/sites";
+import { asset, path, postsFor, relatedSites, sites, type Site } from "../lib/sites";
 
 type Props = { site: Site };
 const { site } = Astro.props;
 const related = relatedSites(site);
 const posts = postsFor(site.id, 8);
+const n = String(sites.findIndex((s) => s.id === site.id) + 1).padStart(2, "0");
 ---
 <Base title={site.name} description={site.description} path={`${site.id}/`}>
-  <Breadcrumb items={[{ href: `${site.id}/`, label: site.name }]} />
-  <header class="page-hero wrap" style={`--c:${site.colors.primary}`}>
-    <div class="kicker">{site.kicker}</div>
-    <h1>{site.name}</h1>
-    <p>{site.long}</p>
-    <ul class="toc">
-      <li><a href="#about">何を扱うか</a></li>
-      <li><a href="#when">こんなときに</a></li>
-      <li><a href="#read">読み方</a></li>
-      <li><a href="#hubs">入口</a></li>
-      <li><a href="#sns">SNS</a></li>
-      <li><a href="#latest">新着</a></li>
-      <li><a href="#next">他のメディア</a></li>
-    </ul>
-    <div class="hero-actions">
-      <a class="btn btn-primary" href={site.url} target="_blank" rel="noopener">サイトを開く</a>
-      <a class="btn btn-ghost" href={path("sns/")}>SNS一覧へ</a>
+  <header class="media-split" style={`--c:${site.colors.primary}`}>
+    <div class="media-poster">
+      <span class="poster-n" aria-hidden="true">{n}</span>
+      <img
+        class:list={["poster-logo", site.logoWide && "is-wide"]}
+        src={asset(site.logo)}
+        alt=""
+        width={site.logoWide ? 320 : 96}
+        height={site.logoWide ? 72 : 96}
+      />
+      <p class="tag">{site.role}</p>
+      <h1>{site.name}</h1>
+      <a class="btn btn-on-color" href={site.url} target="_blank" rel="noopener">サイトを開く</a>
+    </div>
+    <div class="media-intro">
+      <Breadcrumb bare items={[{ href: `${site.id}/`, label: site.name }]} />
+      <div class="kicker">{site.kicker}</div>
+      <p>{site.long}</p>
+      <ul class="toc">
+        <li><a href="#about">何を扱うか</a></li>
+        <li><a href="#when">こんなときに</a></li>
+        <li><a href="#read">読み方</a></li>
+        <li><a href="#hubs">入口</a></li>
+        <li><a href="#sns">SNS</a></li>
+        <li><a href="#latest">新着</a></li>
+        <li><a href="#next">他のメディア</a></li>
+      </ul>
+      <SnsList accounts={site.sns} />
     </div>
   </header>
 
@@ -36,7 +48,6 @@ const posts = postsFor(site.id, 8);
     <p class="sec-lead">{site.description}</p>
     <div class="split">
       <div class="panel prose">
-        <p>{site.long}</p>
         <p>記事の本文・写真・訂正は、すべて先方のサイト側にあります。このポータルは入口です。</p>
       </div>
       <div class="panel">
@@ -94,7 +105,7 @@ const posts = postsFor(site.id, 8);
   <section class="section wrap" id="latest">
     <h2>このメディアの新着</h2>
     <p class="sec-lead">公開済みの記事だけを表示します。画像は転載しません。</p>
-    <PostList posts={posts} showSite={false} />
+    <PostList posts={posts} showSite={false} compact />
     <p style="margin-top:14px"><a href={path("latest/")}>4メディア横断の新着へ</a></p>
   </section>
 
