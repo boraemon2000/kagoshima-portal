@@ -1,6 +1,22 @@
 {
-  "updatedAt": "2026-11-18T07:17:09.694Z",
+  "updatedAt": "2026-11-18T20:26:12.913Z",
   "posts": [
+    {
+      "siteId": "niax",
+      "title": "ダイソージェルクリーナーでMacBookのキーボードを掃除！",
+      "url": "https://kagoshimaniax.com/daiso-gelcleaner/",
+      "date": "2026-11-18T22:00:00",
+      "excerpt": "どうも、僕です◯┓ 今年春、Macを買い換えたんですよ。M5MacBookAir。AIもゴリゴリに動くし、黒いボディがかっこいい。テンションが上がります。 のですが、黒はやはり汚れが目立つ。なんとかせねばと買い求めたのが",
+      "source": "rest"
+    },
+    {
+      "siteId": "niax",
+      "title": "鹿児島で冬の野外映画祭「Moon light cinema 2026」11/22開催！水族館の外庭で『50回目のファーストキス』を上映",
+      "url": "https://kagoshimaniax.com/moonlight-cinema-2026-kagoshima/",
+      "date": "2026-11-18T17:00:00",
+      "excerpt": "2026年11月22日（日）、いおワールドかごしま水族館の外庭で冬の野外映画祭「Moon light cinema 2026」が開かれます。昼の部は入場無料、夜の部は『50回目のファーストキス』を上映（チケット2,500円）。",
+      "source": "rest"
+    },
     {
       "siteId": "niax",
       "title": "すき家「ネギ塩豚タン」丼が個人的ヒット！最近脂がしんどい中年腹ペコ達は食べてみてほしい",
@@ -79,22 +95,6 @@
       "url": "https://kagoshimaniax.com/tsuruda-dam-otsuruko-festival-2026/",
       "date": "2026-11-17T06:00:00",
       "excerpt": "2026年11月21日（土）、さつま町の鶴田ダムで「秋の大鶴湖まつり in 2026」が開かれます。今年は鶴田ダム管理60周年の特別企画つき。点検放流の見学（要予約）、堤体見学、遊覧船、焼酎貯蔵の受付まで、料金や時間をまとめました。",
-      "source": "rest"
-    },
-    {
-      "siteId": "niax",
-      "title": "アミュ3COINS、リニューアルでガジェット周りが充実しまくってて通う！",
-      "url": "https://kagoshimaniax.com/amu-3coins-plus-renewal-2026/",
-      "date": "2026-11-16T22:00:00",
-      "excerpt": "アミュプラザ鹿児島の3COINS+plusが2026年11月13日、本館1Fから2Fへ移転して九州最大級の規模でリニューアルオープン。ガジェット周りの品揃えや店内の様子を、さっそく行ってきた僕がレポートします。",
-      "source": "rest"
-    },
-    {
-      "siteId": "niax",
-      "title": "【福袋２０２７】ミスド福袋は3,900円・6,800円！鹿児島のネット先行予約は12/19〜20、店頭は12/28から",
-      "url": "https://kagoshimaniax.com/fukubukuro2027-misterdonut/",
-      "date": "2026-11-16T17:00:00",
-      "excerpt": "こんにちは！カゴシマニアックス編集部です。 年末の福袋情報、今回は「ミスタードーナツ」から。ダスキンが2026年11月12日に、「ミスド福袋2027」を発表しました。 福袋は3,900円と6,800円（税込）の2種類。来",
       "source": "rest"
     },
     {
@@ -262,8 +262,24 @@
     "niax": {
       "ok": true,
       "source": "rest",
-      "fetchedAt": "2026-11-18T07:17:09.694Z",
+      "fetchedAt": "2026-11-18T20:26:12.913Z",
       "posts": [
+        {
+          "siteId": "niax",
+          "title": "ダイソージェルクリーナーでMacBookのキーボードを掃除！",
+          "url": "https://kagoshimaniax.com/daiso-gelcleaner/",
+          "date": "2026-11-18T22:00:00",
+          "excerpt": "どうも、僕です◯┓ 今年春、Macを買い換えたんですよ。M5MacBookAir。AIもゴリゴリに動くし、黒いボディがかっこいい。テンションが上がります。 のですが、黒はやはり汚れが目立つ。なんとかせねばと買い求めたのが",
+          "source": "rest"
+        },
+        {
+          "siteId": "niax",
+          "title": "鹿児島で冬の野外映画祭「Moon light cinema 2026」11/22開催！水族館の外庭で『50回目のファーストキス』を上映",
+          "url": "https://kagoshimaniax.com/moonlight-cinema-2026-kagoshima/",
+          "date": "2026-11-18T17:00:00",
+          "excerpt": "2026年11月22日（日）、いおワールドかごしま水族館の外庭で冬の野外映画祭「Moon light cinema 2026」が開かれます。昼の部は入場無料、夜の部は『50回目のファーストキス』を上映（チケット2,500円）。",
+          "source": "rest"
+        },
         {
           "siteId": "niax",
           "title": "すき家「ネギ塩豚タン」丼が個人的ヒット！最近脂がしんどい中年腹ペコ達は食べてみてほしい",
@@ -311,29 +327,13 @@
           "date": "2026-11-17T06:00:00",
           "excerpt": "2026年11月21日（土）、さつま町の鶴田ダムで「秋の大鶴湖まつり in 2026」が開かれます。今年は鶴田ダム管理60周年の特別企画つき。点検放流の見学（要予約）、堤体見学、遊覧船、焼酎貯蔵の受付まで、料金や時間をまとめました。",
           "source": "rest"
-        },
-        {
-          "siteId": "niax",
-          "title": "アミュ3COINS、リニューアルでガジェット周りが充実しまくってて通う！",
-          "url": "https://kagoshimaniax.com/amu-3coins-plus-renewal-2026/",
-          "date": "2026-11-16T22:00:00",
-          "excerpt": "アミュプラザ鹿児島の3COINS+plusが2026年11月13日、本館1Fから2Fへ移転して九州最大級の規模でリニューアルオープン。ガジェット周りの品揃えや店内の様子を、さっそく行ってきた僕がレポートします。",
-          "source": "rest"
-        },
-        {
-          "siteId": "niax",
-          "title": "【福袋２０２７】ミスド福袋は3,900円・6,800円！鹿児島のネット先行予約は12/19〜20、店頭は12/28から",
-          "url": "https://kagoshimaniax.com/fukubukuro2027-misterdonut/",
-          "date": "2026-11-16T17:00:00",
-          "excerpt": "こんにちは！カゴシマニアックス編集部です。 年末の福袋情報、今回は「ミスタードーナツ」から。ダスキンが2026年11月12日に、「ミスド福袋2027」を発表しました。 福袋は3,900円と6,800円（税込）の2種類。来",
-          "source": "rest"
         }
       ]
     },
     "news": {
       "ok": true,
       "source": "rest",
-      "fetchedAt": "2026-11-18T07:17:09.694Z",
+      "fetchedAt": "2026-11-18T20:26:12.913Z",
       "posts": [
         {
           "siteId": "news",
@@ -404,7 +404,7 @@
     "mkt": {
       "ok": true,
       "source": "rest",
-      "fetchedAt": "2026-11-18T07:17:09.694Z",
+      "fetchedAt": "2026-11-18T20:26:12.913Z",
       "posts": [
         {
           "siteId": "mkt",
@@ -475,7 +475,7 @@
     "blog": {
       "ok": true,
       "source": "rest",
-      "fetchedAt": "2026-11-18T07:17:09.694Z",
+      "fetchedAt": "2026-11-18T20:26:12.913Z",
       "posts": [
         {
           "siteId": "blog",
