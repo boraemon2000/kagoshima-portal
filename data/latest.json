@@ -1,6 +1,22 @@
 {
-  "updatedAt": "2026-11-20T07:04:25.187Z",
+  "updatedAt": "2026-11-20T20:05:18.849Z",
   "posts": [
+    {
+      "siteId": "niax",
+      "title": "トリキで食べるアパカレー！カレーラーメンや唐揚げカレーになっているよ！",
+      "url": "https://kagoshimaniax.com/toriki-curry/",
+      "date": "2026-11-20T22:43:55",
+      "excerpt": "どうも、僕です◯┓ 鳥貴族でアパ社長コラボのカレーをやっていると聞いて。週に3回くらいはトリキに行きてぇなぁと思っております。理由が欲しいのです。限定十万食、いつまでやれるかは謎です。 焼きラーメン。中華麺をバターソース",
+      "source": "rest"
+    },
+    {
+      "siteId": "niax",
+      "title": "【福袋２０２７】サンクゼール「New Year Bag」は2,000〜5,000円！予約は11/20から、鹿児島はKAGOSHIMA BAY店が対象",
+      "url": "https://kagoshimaniax.com/fukubukuro2027-stcousair/",
+      "date": "2026-11-20T17:00:00",
+      "excerpt": "こんにちは！カゴシマニアックス編集部です。 年末の福袋情報、今回は信州・飯綱町のブランド「サンクゼール（St.Cousair）」から。店舗限定の「New Year Bag 2027」が発表されています。 福袋は2,000",
+      "source": "rest"
+    },
     {
       "siteId": "niax",
       "title": "伊集院のイチゴ農家かき氷屋「トト」のいちごスムージーとスコーンがめちゃウマだったよ！",
@@ -103,22 +119,6 @@
       "url": "https://kagoshimaniax.com/fukubukuro2027-kuzefuku/",
       "date": "2026-11-19T06:00:00",
       "excerpt": "こんにちは！カゴシマニアックス編集部です。 年末の福袋情報、今回は「久世福商店」から。だしや調味料、ごはんのお供などを扱う、日本のうまいものセレクトショップです。「2027新春福袋」が、2026年11月20日（金）から、",
-      "source": "rest"
-    },
-    {
-      "siteId": "niax",
-      "title": "ダイソージェルクリーナーでMacBookのキーボードを掃除！",
-      "url": "https://kagoshimaniax.com/daiso-gelcleaner/",
-      "date": "2026-11-18T22:00:00",
-      "excerpt": "どうも、僕です◯┓ 今年春、Macを買い換えたんですよ。M5MacBookAir。AIもゴリゴリに動くし、黒いボディがかっこいい。テンションが上がります。 のですが、黒はやはり汚れが目立つ。なんとかせねばと買い求めたのが",
-      "source": "rest"
-    },
-    {
-      "siteId": "niax",
-      "title": "鹿児島で冬の野外映画祭「Moon light cinema 2026」11/22開催！水族館の外庭で『50回目のファーストキス』を上映",
-      "url": "https://kagoshimaniax.com/moonlight-cinema-2026-kagoshima/",
-      "date": "2026-11-18T17:00:00",
-      "excerpt": "2026年11月22日（日）、いおワールドかごしま水族館の外庭で冬の野外映画祭「Moon light cinema 2026」が開かれます。昼の部は入場無料、夜の部は『50回目のファーストキス』を上映（チケット2,500円）。",
       "source": "rest"
     },
     {
@@ -262,8 +262,24 @@
     "niax": {
       "ok": true,
       "source": "rest",
-      "fetchedAt": "2026-11-20T07:04:25.187Z",
+      "fetchedAt": "2026-11-20T20:05:18.849Z",
       "posts": [
+        {
+          "siteId": "niax",
+          "title": "トリキで食べるアパカレー！カレーラーメンや唐揚げカレーになっているよ！",
+          "url": "https://kagoshimaniax.com/toriki-curry/",
+          "date": "2026-11-20T22:43:55",
+          "excerpt": "どうも、僕です◯┓ 鳥貴族でアパ社長コラボのカレーをやっていると聞いて。週に3回くらいはトリキに行きてぇなぁと思っております。理由が欲しいのです。限定十万食、いつまでやれるかは謎です。 焼きラーメン。中華麺をバターソース",
+          "source": "rest"
+        },
+        {
+          "siteId": "niax",
+          "title": "【福袋２０２７】サンクゼール「New Year Bag」は2,000〜5,000円！予約は11/20から、鹿児島はKAGOSHIMA BAY店が対象",
+          "url": "https://kagoshimaniax.com/fukubukuro2027-stcousair/",
+          "date": "2026-11-20T17:00:00",
+          "excerpt": "こんにちは！カゴシマニアックス編集部です。 年末の福袋情報、今回は信州・飯綱町のブランド「サンクゼール（St.Cousair）」から。店舗限定の「New Year Bag 2027」が発表されています。 福袋は2,000",
+          "source": "rest"
+        },
         {
           "siteId": "niax",
           "title": "伊集院のイチゴ農家かき氷屋「トト」のいちごスムージーとスコーンがめちゃウマだったよ！",
@@ -311,29 +327,13 @@
           "date": "2026-11-19T06:00:00",
           "excerpt": "こんにちは！カゴシマニアックス編集部です。 年末の福袋情報、今回は「久世福商店」から。だしや調味料、ごはんのお供などを扱う、日本のうまいものセレクトショップです。「2027新春福袋」が、2026年11月20日（金）から、",
           "source": "rest"
-        },
-        {
-          "siteId": "niax",
-          "title": "ダイソージェルクリーナーでMacBookのキーボードを掃除！",
-          "url": "https://kagoshimaniax.com/daiso-gelcleaner/",
-          "date": "2026-11-18T22:00:00",
-          "excerpt": "どうも、僕です◯┓ 今年春、Macを買い換えたんですよ。M5MacBookAir。AIもゴリゴリに動くし、黒いボディがかっこいい。テンションが上がります。 のですが、黒はやはり汚れが目立つ。なんとかせねばと買い求めたのが",
-          "source": "rest"
-        },
-        {
-          "siteId": "niax",
-          "title": "鹿児島で冬の野外映画祭「Moon light cinema 2026」11/22開催！水族館の外庭で『50回目のファーストキス』を上映",
-          "url": "https://kagoshimaniax.com/moonlight-cinema-2026-kagoshima/",
-          "date": "2026-11-18T17:00:00",
-          "excerpt": "2026年11月22日（日）、いおワールドかごしま水族館の外庭で冬の野外映画祭「Moon light cinema 2026」が開かれます。昼の部は入場無料、夜の部は『50回目のファーストキス』を上映（チケット2,500円）。",
-          "source": "rest"
         }
       ]
     },
     "news": {
       "ok": true,
       "source": "rest",
-      "fetchedAt": "2026-11-20T07:04:25.187Z",
+      "fetchedAt": "2026-11-20T20:05:18.849Z",
       "posts": [
         {
           "siteId": "news",
@@ -404,7 +404,7 @@
     "mkt": {
       "ok": true,
       "source": "rest",
-      "fetchedAt": "2026-11-20T07:04:25.187Z",
+      "fetchedAt": "2026-11-20T20:05:18.849Z",
       "posts": [
         {
           "siteId": "mkt",
@@ -475,7 +475,7 @@
     "blog": {
       "ok": true,
       "source": "rest",
-      "fetchedAt": "2026-11-20T07:04:25.187Z",
+      "fetchedAt": "2026-11-20T20:05:18.849Z",
       "posts": [
         {
           "siteId": "blog",
