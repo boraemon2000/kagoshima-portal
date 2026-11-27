@@ -1,6 +1,22 @@
 {
-  "updatedAt": "2026-11-27T08:16:45.931Z",
+  "updatedAt": "2026-11-27T21:09:28.655Z",
   "posts": [
+    {
+      "siteId": "niax",
+      "title": "志布志の煎茶「木魂（極）」が世界一！「THE LEAFIES 2026」で最高賞を受賞",
+      "url": "https://kagoshimaniax.com/wakoen-theleafies2026/",
+      "date": "2026-11-28T06:00:00",
+      "excerpt": "みなさんこんにちは、カゴシマニアックス編集部です。 英国で開催された国際的なお茶の品評会「THE LEAFIES International Tea Awards 2026」において、鹿児島県志布志市を拠点とする鹿児島堀",
+      "source": "rest"
+    },
+    {
+      "siteId": "niax",
+      "title": "ファミマ樋之口町がオープンしてたんで、ドラクエコラボスライムまんを",
+      "url": "https://kagoshimaniax.com/open-famimatenokuchi/",
+      "date": "2026-11-27T22:00:00",
+      "excerpt": "どうも、僕です◯┓ ２０２６年１１月２７日、鹿児島市樋之口町にファミリーマート樋之口町店がオープンするという情報をキャッチしました。天文館公園とヤキメシヤの真ん中と聞いていたのですが、あそこはファミマなかったか？うん、や",
+      "source": "rest"
+    },
     {
       "siteId": "niax",
       "title": "センテラス天文館で大晦日カウントダウン「SPACE DISCO COUNTDOWN KAGOSHIMA 2026→2027」開催！マーク・パンサー（globe）出演、入場無料",
@@ -87,22 +103,6 @@
       "url": "https://kagoshima.blog/kagoshima-2026-11-26-paydon-techo-shoene/",
       "date": "2026-11-26T09:03:45",
       "excerpt": "・鹿児島市・県 Payどんが11/26（木）午後から順次再開、バス運賃半額キャンペーンも再開（プレミアムポイントは延期のまま） ・鹿児島県 2027年版の鹿児島県民手帳は1冊700円、観光施設・道の駅の割引特典つき ・鹿児島市 冬の省エネ・節電の呼びかけ、県のアプリ「エコふぁみ」でポイント",
-      "source": "rest"
-    },
-    {
-      "siteId": "niax",
-      "title": "【福袋２０２７】アフタヌーンティー・ティールームの福袋は10,000円！鹿児島山形屋店は専用サイトでなく「鹿児島山形屋オンラインショップ」で予約、期間は山形屋のサイトで",
-      "url": "https://kagoshimaniax.com/fukubukuro2027-afternoontea/",
-      "date": "2026-11-26T05:00:00",
-      "excerpt": "こんにちは！カゴシマニアックス編集部です。 年末の福袋情報、今回は「アフタヌーンティー・ティールーム」から。ネコとTEAモチーフのアートをあしらった「ニューイヤーズバッグ2027」が登場します。 価格は10,000円（税",
-      "source": "rest"
-    },
-    {
-      "siteId": "niax",
-      "title": "市役所前名山町におにぎり屋さん「うさぎの囲炉裏」ができてる",
-      "url": "https://kagoshimaniax.com/open-usaginoirori/",
-      "date": "2026-11-25T22:00:00",
-      "excerpt": "どうも、僕です◯┓ ２０２５年１１月１８日、鹿児島市役所前名山町に新しいお店ができたとインスタで見かけたので行ってきました。おにぎり専門店「うさぎの囲炉裏」さん。名山らしいちょっとレトロクラシックな出で立ちのお店。 お店",
       "source": "rest"
     },
     {
@@ -262,8 +262,24 @@
     "niax": {
       "ok": true,
       "source": "rest",
-      "fetchedAt": "2026-11-27T08:16:45.931Z",
+      "fetchedAt": "2026-11-27T21:09:28.655Z",
       "posts": [
+        {
+          "siteId": "niax",
+          "title": "志布志の煎茶「木魂（極）」が世界一！「THE LEAFIES 2026」で最高賞を受賞",
+          "url": "https://kagoshimaniax.com/wakoen-theleafies2026/",
+          "date": "2026-11-28T06:00:00",
+          "excerpt": "みなさんこんにちは、カゴシマニアックス編集部です。 英国で開催された国際的なお茶の品評会「THE LEAFIES International Tea Awards 2026」において、鹿児島県志布志市を拠点とする鹿児島堀",
+          "source": "rest"
+        },
+        {
+          "siteId": "niax",
+          "title": "ファミマ樋之口町がオープンしてたんで、ドラクエコラボスライムまんを",
+          "url": "https://kagoshimaniax.com/open-famimatenokuchi/",
+          "date": "2026-11-27T22:00:00",
+          "excerpt": "どうも、僕です◯┓ ２０２６年１１月２７日、鹿児島市樋之口町にファミリーマート樋之口町店がオープンするという情報をキャッチしました。天文館公園とヤキメシヤの真ん中と聞いていたのですが、あそこはファミマなかったか？うん、や",
+          "source": "rest"
+        },
         {
           "siteId": "niax",
           "title": "センテラス天文館で大晦日カウントダウン「SPACE DISCO COUNTDOWN KAGOSHIMA 2026→2027」開催！マーク・パンサー（globe）出演、入場無料",
@@ -311,29 +327,13 @@
           "date": "2026-11-26T10:00:00",
           "excerpt": "どうも、僕です◯┓ 先日、熊本県の百貨店にある開店するお菓子コーナーがなくなるというニュースを見ました。僕はいてもたってもいられず行きましたね、山形屋に。上の階では北海道物産展で賑わっている最中、僕は飴を買いました。 ２",
           "source": "rest"
-        },
-        {
-          "siteId": "niax",
-          "title": "【福袋２０２７】アフタヌーンティー・ティールームの福袋は10,000円！鹿児島山形屋店は専用サイトでなく「鹿児島山形屋オンラインショップ」で予約、期間は山形屋のサイトで",
-          "url": "https://kagoshimaniax.com/fukubukuro2027-afternoontea/",
-          "date": "2026-11-26T05:00:00",
-          "excerpt": "こんにちは！カゴシマニアックス編集部です。 年末の福袋情報、今回は「アフタヌーンティー・ティールーム」から。ネコとTEAモチーフのアートをあしらった「ニューイヤーズバッグ2027」が登場します。 価格は10,000円（税",
-          "source": "rest"
-        },
-        {
-          "siteId": "niax",
-          "title": "市役所前名山町におにぎり屋さん「うさぎの囲炉裏」ができてる",
-          "url": "https://kagoshimaniax.com/open-usaginoirori/",
-          "date": "2026-11-25T22:00:00",
-          "excerpt": "どうも、僕です◯┓ ２０２５年１１月１８日、鹿児島市役所前名山町に新しいお店ができたとインスタで見かけたので行ってきました。おにぎり専門店「うさぎの囲炉裏」さん。名山らしいちょっとレトロクラシックな出で立ちのお店。 お店",
-          "source": "rest"
         }
       ]
     },
     "news": {
       "ok": true,
       "source": "rest",
-      "fetchedAt": "2026-11-27T08:16:45.931Z",
+      "fetchedAt": "2026-11-27T21:09:28.655Z",
       "posts": [
         {
           "siteId": "news",
@@ -404,7 +404,7 @@
     "mkt": {
       "ok": true,
       "source": "rest",
-      "fetchedAt": "2026-11-27T08:16:45.931Z",
+      "fetchedAt": "2026-11-27T21:09:28.655Z",
       "posts": [
         {
           "siteId": "mkt",
@@ -475,7 +475,7 @@
     "blog": {
       "ok": true,
       "source": "rest",
-      "fetchedAt": "2026-11-27T08:16:45.931Z",
+      "fetchedAt": "2026-11-27T21:09:28.655Z",
       "posts": [
         {
           "siteId": "blog",
